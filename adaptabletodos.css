@@ -1,29 +1,111 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #990000;
-}
-/*Multiples puntos de interrupcion*/
-@media (max-width: 1024px) {
-    body {
-        background-color: #3333FF;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-color: #FF33FF;
-    }
+button {
+    float: right;
+    margin-top: 12px;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fdfdfd; /* Color del texto */
+    background-color: transparent; /* Color de fondo transparente */
+    border-radius: 8px; /* Borde redondeado */
+    cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    body {
-        background-color: #339933;
-    }
+#titulo{
+    position: absolute;
+    top: 12%;
+    left: 33%;
+    font: bold 25px Arial, sans-serif;
+    color: #fdfdfd;
+    text-align: center;
 }
 
-@media (max-width: 320px) {
-    body {
-        background-color: #CCCCCC;
-    }
+.container{
+    margin: 0%;
+    width: auto;
+    height: 280px;
+    background-image: url('imagenes\\fondo.avif'); /* Reemplaza 'ruta/de/imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
+
+.primera-fila {
+    display: flex;
+    position: absolute; /* Posiciona el elemento absolutamente dentro de su contenedor */
+    top: 25%; /* Coloca el elemento en el 50% del borde superior del contenedor */
+    left: 50%; /* Coloca el elemento en el 50% del borde izquierdo del contenedor */
+    transform: translate(-50%, -50%); /* Centra el elemento completamente */
+}
+
+.miembro, .grupo {
+    font-weight: bold; 
+    color: rgb(251, 251, 253);
+}
+
+.numero {
+    position: relative; /* Posiciona los números relativamente */
+    top: -15px; /* Mueve los números hacia arriba 15px */
+    left: -50px; /* Mueve los números hacia la izquierda 10px */
+    font-size: 14px; /* Tamaño de fuente de los números */
+    color: rgb(255, 255, 255); /* Color de los números */
+}
+
+.buscador {
+    position: absolute;
+    margin-top: 230px; /* Agrega un espacio superior */
+    margin-left: 20px;
+    text-align: center; /* Alinea el contenido del buscador al centro */
+}
+
+.buscador input[type="search"] {
+    width: 300px; /* Ancho deseado del campo de búsqueda */
+    border-radius: 50px; /* Borde circular */
+    border: 1px solid #ccc; /* Añade un borde para mejorar la apariencia */
+    padding: 8px; /* Añade un relleno para evitar que el texto toque el borde */
+}
+
+.contenido-extra {
+    position: absolute;
+    text-align: center; /* Alinea el contenido al centro */
+    margin-top: 300px; /* Añade un espacio superior */
+    left: 12px;
+}
+
+.contenido-extra img {
+    width: 408px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 200px;
+    border-radius: 5%; /* Hace que la imagen sea circular */
+}
+
+.contenido-extra p {
+    margin: 5px;
+    text-align: left;
+}
+
+.perfil-usuario {
+    width: 35px; /* Ajusta el tamaño del perfil de usuario */
+    height: 35px;
+    margin-left: 5px;
+    background-color: #000000; /* Color de fondo del perfil de usuario */
+    border-radius: 50%; /* Hace que el perfil de usuario sea circular */
+}
+
+.perfil-usuario > a > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#grupo {
+    font: bolder 18px Arial;
+}
+
+#usuario {
+    position: absolute;
+    top: 260px;
+    left: 40px;
+    color: rgb(154, 156, 155);
+}
+    
