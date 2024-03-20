@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Grupo de Estudio</title>
+    <link rel="stylesheet" href="perfil-grupo.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">⋮</a>
+                <div class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">Perfil</a>
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1 id="titulo">Deep Learning</h1>
+    </header>
+    
+    <div class="profile">
+        <div class="tabs">
+            <button id="groupInfoBtn" class="tab-btn active" onclick="showGroupInfo()">Información del Grupo</button>
+            <button id="membersBtn" class="tab-btn" onclick="showMembers()">Miembros</button>
+        </div>
+        <div id="groupInfo" class="group-info active">
+            <img src="group_avatar.png" alt="Avatar del grupo">
+            <p>Descripción del grupo de estudio...</p>
+            <div class="details">
+                <p><strong>Líder:</strong> Nombre del Líder</p>
+                <p><strong>Miembros:</strong> Número de miembros</p>
+                <p><strong>Horario de reunión:</strong> Días, horas</p>
+                <p><strong>Ubicación:</strong> Lugar de encuentro</p>
+                <p><strong>Contacto:</strong> Correo electrónico</p>
+            </div>
+        </div>
+        <div id="members" class="members">
+            <h2>Miembros</h2>
+            <ul>
+                <li>Nombre del Miembro 1</li>
+                <li>Nombre del Miembro 2</li>
+                <li>Nombre del Miembro 3</li>
+                <!-- Agrega más miembros según sea necesario -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
