@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Este es un documento HTML5">
     <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="perfil-grupo.css">
     <script>
         var visible = false;
@@ -26,11 +27,11 @@
         window.addEventListener("load", iniciar);
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var botonInfo = document.querySelector(".boton-info");
             var infoGrupo = document.querySelector(".info-grupo");
 
-            botonInfo.addEventListener("click", function(event) {
+            botonInfo.addEventListener("click", function (event) {
                 event.preventDefault();
                 infoGrupo.classList.toggle("oculto");
             });
@@ -38,11 +39,11 @@
     </script>
     <script>
         // Tu JavaScript aquí
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var botonMiembros = document.querySelector(".boton-miembros");
             var listaMiembros = document.getElementById("listaMiembros");
 
-            botonMiembros.addEventListener("click", function(event) {
+            botonMiembros.addEventListener("click", function (event) {
                 event.preventDefault();
                 mostrarMiembros();
             });
@@ -58,7 +59,7 @@
                 ulMiembros.innerHTML = "";
 
                 // Agrega cada miembro como un <li> a la lista <ul>
-                nombresMiembros.forEach(function(nombre) {
+                nombresMiembros.forEach(function (nombre) {
                     var li = document.createElement("li");
                     li.textContent = nombre;
                     ulMiembros.appendChild(li);
@@ -93,33 +94,31 @@
                     <figure>
                         <img src="imagenes/deep.jpeg">
                     </figure>
-                    <h1>Deep Learning</h1>
+                    <h1 id="titulo">Deep Learning</h1>
                     <time datetime="2016-12-23" pubdate>
                         <div class="numerodia">100</div>
                         <div class="nombredia">Miembros</div>
                     </time>
+                    <!-- Botón para mostrar la información del grupo -->
                     <div class="botones-container">
-                        <!-- Botón para mostrar la información del grupo -->
-                        <div class="botones-container">
-                            <div class="botones">
-                                <a href="#" class="boton-info">Información del Grupo</a>
-                                <div class="info-grupo oculto">
-                                    <!-- Información del grupo -->
-                                    <p><b>Administrador:</b> </p>
-                                    <p><b>Número de miembros:</b> </p>
-                                    <p><b>Enlace de video llamada Meet:</b> <a href="#">Enlace</a></p>
-                                    <p><b>Descripción del grupo:</b></p>
-                                </div>
+                        <div class="botones">
+                            <a href="#" class="boton-info">Información del Grupo</a>
+                            <div class="info-grupo oculto">
+                                <!-- Información del grupo -->
+                                <p><b>Administrador:</b> </p>
+                                <p><b>Número de miembros:</b> </p>
+                                <p><b>Enlace de video llamada Meet:</b> <a href="#">Enlace</a></p>
+                                <p><b>Descripción del grupo:</b></p>
                             </div>
-                            <!-- Botón para mostrar la lista de miembros -->
-                            <div class="botones">
-                                <a href="#" class="boton-miembros">Lista de Miembros</a>
-                                <!-- Aquí se agregará la lista de miembros -->
-                                <div id="listaMiembros" class="oculto">
-                                    <ul id="miembrosGrupo">
-                                        <!-- Los miembros del grupo se agregarán aquí dinámicamente -->
-                                    </ul>
-                                </div>
+                        </div>
+                        <!-- Botón para mostrar la lista de miembros -->
+                        <div class="botones">
+                            <a href="#" class="boton-miembros">Lista de Miembros</a>
+                            <!-- Aquí se agregará la lista de miembros -->
+                            <div id="listaMiembros" class="oculto">
+                                <ul id="miembrosGrupo">
+                                    <!-- Los miembros del grupo se agregarán aquí dinámicamente -->
+                                </ul>
                             </div>
                         </div>
                     </div>
