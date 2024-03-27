@@ -2,14 +2,16 @@ button {
     float: right;
     margin-top: 12px;
     padding: 3px 10px;
-    font-size: 16px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
-    color: #fdfdfd; /* Color del texto */
     background-color: transparent; /* Color de fondo transparente */
     border-radius: 8px; /* Borde redondeado */
     cursor: pointer;
+}
+
+button > a {
+    font-size: 16px;
+    color: #ffffff;
 }
 
 #titulo{
@@ -74,8 +76,8 @@ button {
 }
 
 .contenido-extra img {
-    width: 408px; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: 200px;
+    width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 150px;
     border-radius: 5%; /* Hace que la imagen sea circular */
 }
 
@@ -104,7 +106,7 @@ button {
 
 #usuario {
     position: absolute;
-    top: 260px;
+    top: 210px;
     left: 40px;
     color: rgb(154, 156, 155);
 }

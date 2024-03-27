@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Perfil de grupo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento HTML5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="stylesheet" href="perfil-grupo.css">
+    <script>
+        var visible = false;
+        function iniciar() {
+            var elemento = document.getElementById("menu-img");
+            elemento.addEventListener("click", mostrarMenu);
+        }
+        function mostrarMenu() {
+            var elemento = document.getElementById("menuprincipal");
+            if (!visible) {
+                elemento.style.display = "flex";
+                visible = true;
+            } else {
+                elemento.style.display = "none";
+                visible = false;
+            }
+        }
+        window.addEventListener("load", iniciar);
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var botonInfo = document.querySelector(".boton-info");
+            var infoGrupo = document.querySelector(".info-grupo");
+
+            botonInfo.addEventListener("click", function(event) {
+                event.preventDefault();
+                infoGrupo.classList.toggle("oculto");
+            });
+        });
+    </script>
+    <script>
+        // Tu JavaScript aquí
+        document.addEventListener("DOMContentLoaded", function() {
+            var botonMiembros = document.querySelector(".boton-miembros");
+            var listaMiembros = document.getElementById("listaMiembros");
+
+            botonMiembros.addEventListener("click", function(event) {
+                event.preventDefault();
+                mostrarMiembros();
+            });
+
+            function mostrarMiembros() {
+                // Array con los nombres de los miembros del grupo
+                var nombresMiembros = ["Miembro 1", "Miembro 2", "Miembro 3", "Miembro 4", "Miembro 5"];
+
+                // Selecciona el elemento <ul> donde se mostrarán los miembros
+                var ulMiembros = document.getElementById("miembrosGrupo");
+
+                // Vacía la lista de miembros antes de agregar los nuevos
+                ulMiembros.innerHTML = "";
+
+                // Agrega cada miembro como un <li> a la lista <ul>
+                nombresMiembros.forEach(function(nombre) {
+                    var li = document.createElement("li");
+                    li.textContent = nombre;
+                    ulMiembros.appendChild(li);
+                });
+
+                // Muestra la lista de miembros
+                listaMiembros.classList.toggle("oculto");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav id="menuicono">
+        <img src="iconos/menu.png" width="30" height="40" id="menu-img">
+    </nav>
+    <nav id="menuprincipal">
+        <div>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="fotos.html"><img src="iconos/atras.png" width="30" height="25"></a></li>
+                <li><a href="fotos.html"><img src="iconos/adelante.png" width="30" height="25"></a></li>
+                <li><a href="Perfil-usuario.html">Perfil</a></li>
+                <li><a href="index.html">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <section id="grupo">
+                <article>
+                    <figure>
+                        <img src="imagenes/deep.jpeg">
+                    </figure>
+                    <h1>Deep Learning</h1>
+                    <time datetime="2016-12-23" pubdate>
+                        <div class="numerodia">100</div>
+                        <div class="nombredia">Miembros</div>
+                    </time>
+                    <div class="botones-container">
+                        <!-- Botón para mostrar la información del grupo -->
+                        <div class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="boton-info">Información del Grupo</a>
+                                <div class="info-grupo oculto">
+                                    <!-- Información del grupo -->
+                                    <p><b>Administrador:</b> </p>
+                                    <p><b>Número de miembros:</b> </p>
+                                    <p><b>Enlace de video llamada Meet:</b> <a href="#">Enlace</a></p>
+                                    <p><b>Descripción del grupo:</b></p>
+                                </div>
+                            </div>
+                            <!-- Botón para mostrar la lista de miembros -->
+                            <div class="botones">
+                                <a href="#" class="boton-miembros">Lista de Miembros</a>
+                                <!-- Aquí se agregará la lista de miembros -->
+                                <div id="listaMiembros" class="oculto">
+                                    <ul id="miembrosGrupo">
+                                        <!-- Los miembros del grupo se agregarán aquí dinámicamente -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <aside id="infoadicional">
+                <h1>Material Adicional Del Grupo</h1>
+                <p>Cita del artículo uno</p>
+                <p><a href="x">link de pagina web</a></p>
+            </aside>
+        </div>
+    </main>
+    <footer id="pielogo">
+        <div>
+            <section class="seccionpie">
+                <h1>Sitio Web</h1>
+                <p><a href="index.html">Principal</a></p>
+                <p><a href="perfil-grupo.html">Perfil</a></p>
+                <p><a href="index.html">Cerrar Sesion</a></p>
+            </section>
+            <section class="seccionpie">
+                <h1>Ayuda</h1>
+                <p><a href="contacto.html">Contacto</a></p>
+            </section>
+            <section class="seccionpie">
+                <address>Toronto, Canada</address>
+                <small>&copy; Derechos Reservados 2016</small>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
